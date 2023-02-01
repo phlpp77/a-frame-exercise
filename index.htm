@@ -21,7 +21,20 @@
       <a-triangle color="#FFFFFF" position="0 0 -2" scale="2.5 2.5 2.5" ></a-triangle> // Main white triangle
       <a-triangle color="#434343" position="0 0 -1.9" scale="2 2 2.5" ></a-triangle> // Darker triangle
       <a-triangle color="#8DAEB7" position="0 0 -1.8" scale="1.5 1.5 2.5" ></a-triangle> // Darker triangle
-      <a-sky color="#E9EDF0"></a-sky>
+	  
+      <a-triangle color="#616F70" position="-.35 .15 -1.7" scale="1.25 1.25 1.25" ></a-triangle> // left gray triangle
+	  <a-triangle color="#D6E2E1" position="-.170 .1 -1.6" scale=".975 .82 .75" ></a-triangle> // left light gray triangle
+	  
+      <a-triangle color="#616F70" position=".35 .15 -1.7" scale="1.25 1.25 1.25" ></a-triangle> // right gray triangle
+	  <a-triangle color="#D6E2E1" position=".170 .1 -1.6" scale=".975 .82 .75" ></a-triangle> // right light gray triangle
+      <a-sky color="#E9EDF0" animation="property: components.material.material.color;
+                      type: color;
+					  from: #031236;
+                      to: #422C6D;
+                      dur: 10000;
+                      dir: alternate;
+                      loop: true">
+	  </a-sky>
     </a-scene>
   </body>
 </html>
