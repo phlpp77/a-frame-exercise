@@ -9,9 +9,24 @@
     <a-scene>
       <!-- Asset management system. -->
       <a-assets>
-        <img id="moon" src="./assets/moon.jpeg" />
+        <img id="moon" src="./assets/moon.jpeg" /> // material for moon sphere
+        <audio id="music" src="./assets/moon.mp3" preload="auto"></audio> //
+        sound of the whole experience
       </a-assets>
 
+      <!-- <a-entity
+        id="music"
+        geometry="primitive: box"
+        sound="src: #music; on: click"
+      ></a-entity> -->
+      <a-entity
+        id="sound"
+        geometry="primitive: sphere; radius: 0.25"
+        material="color: yellow"
+        position="0 1.25 -5"
+        sound="src: #music; autoplay: true"
+        animation="property: object3D.position.y; to: 0.75; dir: alternate; dur: 500; loop: true"
+      ></a-entity>
       <a-sphere
         src="#moon"
         position="0 1.25 -5"
@@ -67,141 +82,130 @@
         position=".170 -.225 -1.6"
         scale="1.5 1.5 .75"
       ></a-triangle>
-      // right light gray triangle
-	  
-	  // 3d stuff
-	  // White triangle 3d
-	  <a-box color="#FFFFFF"
-        position="0 -1.25 -2.05"
-        scale="2.5 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#FFFFFF"
+      // right light gray triangle // 3d stuff // White triangle 3d
+      <a-box color="#FFFFFF" position="0 -1.25 -2.05" scale="2.5 .01 .1">
+      </a-box>
+      <a-box
+        color="#FFFFFF"
         position="-.625 0 -2.05"
         scale="2.795 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#FFFFFF"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#FFFFFF"
         position=".625 0 -2.05"
         scale="2.795 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Darker triangle 3d
-	  <a-box color="#434343"
-        position="0 -1 -1.95"
-        scale="2 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#434343"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Darker triangle 3d
+      <a-box color="#434343" position="0 -1 -1.95" scale="2 .01 .1"> </a-box>
+      <a-box
+        color="#434343"
         position="-.5 0 -1.95"
         scale="2.236 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#434343"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#434343"
         position=".5 0 -1.95"
         scale="2.236 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Blue triangle 3d
-	  <a-box color="#8DAEB7"
-        position="0 -.75 -1.85"
-        scale="1.5 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#8DAEB7"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Blue triangle 3d
+      <a-box color="#8DAEB7" position="0 -.75 -1.85" scale="1.5 .01 .1">
+      </a-box>
+      <a-box
+        color="#8DAEB7"
         position="-.375 0 -1.85"
         scale="1.677 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#8DAEB7"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#8DAEB7"
         position=".375 0 -1.85"
         scale="1.677 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Left gray triangle 3d
-	  <a-box color="#616F70"
-        position="-.35 -1.2 -1.75"
-        scale="2 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#616F70"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Left gray triangle 3d
+      <a-box color="#616F70" position="-.35 -1.2 -1.75" scale="2 .01 .1">
+      </a-box>
+      <a-box
+        color="#616F70"
         position="-.85 -.2 -1.75"
         scale="2.236 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#616F70"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#616F70"
         position=".15 -.2 -1.75"
         scale="2.236 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Right gray triangle 3d
-	  <a-box color="#616F70"
-        position=".35 -1.2 -1.75"
-        scale="2 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#616F70"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Right gray triangle 3d
+      <a-box color="#616F70" position=".35 -1.2 -1.75" scale="2 .01 .1">
+      </a-box>
+      <a-box
+        color="#616F70"
         position="-.15 -.2 -1.75"
         scale="2.236 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#616F70"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#616F70"
         position=".85 -.2 -1.75"
         scale="2.236 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Left light gray triangle 3d
-	  <a-box color="#D6E2E1"
-        position="-.170 -.975 -1.65"
-        scale="1.5 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#D6E2E1"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Left light gray triangle 3d
+      <a-box color="#D6E2E1" position="-.170 -.975 -1.65" scale="1.5 .01 .1">
+      </a-box>
+      <a-box
+        color="#D6E2E1"
         position="-.545 -.225 -1.65"
         scale="1.677 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#D6E2E1"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#D6E2E1"
         position=".205 -.225 -1.65"
         scale="1.677 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
-	  
-	  // Right light gray triangle 3d
-	  <a-box color="#D6E2E1"
-        position=".170 -.975 -1.65"
-        scale="1.5 .01 .1"
-        >
-	  </a-box>
-	  <a-box color="#D6E2E1"
+        rotation="0 0 -63.435"
+      >
+      </a-box>
+
+      // Right light gray triangle 3d
+      <a-box color="#D6E2E1" position=".170 -.975 -1.65" scale="1.5 .01 .1">
+      </a-box>
+      <a-box
+        color="#D6E2E1"
         position="-.205 -.225 -1.65"
         scale="1.677 .01 .1"
-		rotation="0 0 63.435"
-        >
-	  </a-box>
-	  <a-box color="#D6E2E1"
+        rotation="0 0 63.435"
+      >
+      </a-box>
+      <a-box
+        color="#D6E2E1"
         position=".545 -.225 -1.65"
         scale="1.677 .01 .1"
-		rotation="0 0 -63.435"
-        >
-	  </a-box>
+        rotation="0 0 -63.435"
+      >
+      </a-box>
 
       <a-sky
         color="#E9EDF0"
