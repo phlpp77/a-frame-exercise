@@ -3,15 +3,20 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     // Include log component to print
     <script src="./components/log.js"></script>
-    <script src="./components/moon.js"></script>
+    <title>Experience Art in VR</title>
   </head>
   <body>
     <a-scene>
       <!-- Asset management system. -->
       <a-assets>
         <img id="moon" src="./assets/moon.jpeg" /> // material for moon sphere
-        <audio id="music" src="./assets/moon.mp3" preload="auto"></audio> //
-        sound of the whole experience
+        <audio
+          id="music"
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2c/%28Re%29Percusi%C3%B3n_-_luis_alvaz.ogg"
+          preload="auto"
+          crossorigin="anonymous"
+        ></audio>
+        // sound of the whole experience
       </a-assets>
 
       <!-- <a-entity
@@ -24,8 +29,9 @@
         geometry="primitive: sphere; radius: 0.25"
         material="color: yellow"
         position="0 1.25 -5"
-        sound="src: #music; autoplay: true"
+        sound="on: click; src: url(https://upload.wikimedia.org/wikipedia/commons/2/2c/%28Re%29Percusi%C3%B3n_-_luis_alvaz.ogg); autoplay: true"
         animation="property: object3D.position.y; to: 0.75; dir: alternate; dur: 500; loop: true"
+        log="Play music."
       ></a-entity>
       <a-sphere
         src="#moon"
